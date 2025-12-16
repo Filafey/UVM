@@ -1,0 +1,32 @@
+# Тестовая программа для варианта 28
+# Загружаем константы в регистры
+load_const;0;100
+load_const;1;75
+load_const;2;200
+load_const;3;50
+load_const;4;300
+load_const;5;90
+
+# Инициализируем память значениями
+load_const;10;0
+write_value;0;10;0
+write_value;1;10;1
+write_value;2;10;2
+write_value;3;10;3
+write_value;4;10;4
+write_value;5;10;5
+
+# Тестируем операцию greater_or_equal
+# Сравниваем значения из регистров 0-5 с числом 75
+# Результаты записываем в память по адресам 100-105
+
+# Устанавливаем регистр 20 как целевой адрес для результатов
+load_const;20;100
+
+# Выполняем сравнения
+greater_or_equal;20;0;0
+greater_or_equal;20;1;1
+greater_or_equal;20;2;2
+greater_or_equal;20;3;3
+greater_or_equal;20;4;4
+greater_or_equal;20;5;5
